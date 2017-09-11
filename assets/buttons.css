@@ -1,0 +1,389 @@
+* {
+	margin: 0px;
+	padding: 0px;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.btn {
+  position: relative;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+  float: left;
+}
+.btn#button-27 {
+  position: relative;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+  float: left;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #F44336;
+
+}
+
+#button-8:hover {
+    cursor: not-allowed;
+}
+
+#button-9:hover {
+	-webkit-animation: growshrink 2s infinite; /* Safari 4.0 - 8.0 */
+	animation: growshrink 2s infinite;
+}
+@keyframes growshrink {
+    0% {font-size: : 22px;}
+		66% {font-size: 16px;}
+		99% {font-size: 21.5px;}
+}
+
+#button-10{
+	z-index: 5;
+}
+
+#button-10:hover {
+	-webkit-animation: down 10s infinite; /* Safari 4.0 - 8.0 */
+	animation: down 10s infinite;
+}
+@keyframes down {
+		0% {top: 0px;}
+		99% {top: 1000px;}
+}
+
+.clicked {
+  background-color: #4e7bba;
+  box-shadow: 0px 5px 0px 0px #234c7a;
+}
+
+.wash {
+  background-color: #525252;
+  box-shadow: 0px 5px 0px 0px #333333;
+}
+
+.wash-canvas {
+  background-color: #E4E4E4;
+}
+
+.font-change {
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+
+.togglecolor{
+	background-color: #00796b;
+}
+.togglecolor:hover {
+	background-color: #fdd835;
+
+}
+
+.shadow {
+	-webkit-box-shadow: 0px 15px 39px 2px rgba(117,117,117,0.75);
+-moz-box-shadow: 0px 15px 39px 2px rgba(117,117,117,0.75);
+box-shadow: 0px 15px 39px 2px rgba(117,117,117,0.75);
+}
+
+#button-22:hover {
+    transform: rotate(20deg);
+}
+
+.skewme {
+-webkit-animation: skew 4s infinite;
+animation: skew 4s infinite;
+background-color: #3f51b5;
+}
+
+@keyframes skew {
+	0% {transform: skewX(0deg);}
+	33% {transform: skewX(20deg);}
+	66% {transform: skewX(-20deg);}
+	99% {transform: skewX(-1deg);}
+}
+
+.skewmetoo{
+	-webkit-animation: skewmetoo 4s infinite;
+	animation: skewmetoo 4s infinite;
+	background-color: #ffeb3b;
+}
+
+@keyframes skewmetoo {
+	0% {transform: skew(0deg,0deg);}
+	40% {transform: skew(25deg,15deg);}
+	80% {transform: skew(-15deg,-25deg);}
+	90% {transform: skew(10deg,5deg);}
+}
+
+.bounce{
+	-webkit-animation: bounce 6s infinite;
+	animation: bounce 4s infinite;
+	background-color: #ff7043;
+}
+
+@keyframes bounce {
+	0% {transform: translate(0px,0px);}
+	10% {transform: translate(0px,-100px);}
+	18% {transform: translate(0px,0px);}
+	30% {transform: translate(0px,-80px);}
+	35% {transform: translate(0px,-0px);}
+	45% {transform: translate(0px,-55px);}
+	50% {transform: translate(0px,-0px);}
+	60% {transform: translate(0px,-35px);}
+	63% {transform: translate(0px,20px);}
+	70% {transform: translate(0px,-10px);}
+	74% {transform: translate(0px,10px);}
+	80% {transform: translate(0px,0px);}
+}
+
+.swipe{
+	-webkit-animation: swipe 2s infinite;
+	animation: swipe 2s infinite;
+	z-index: -1;
+	background-color: #64dd17;
+}
+
+@keyframes swipe {
+	0% {transform: translate(0px,0px);}
+	33% {transform: translate(-600px,0px);}
+	88% {transform: translate(400px,0px);}
+	99% {transform: translate(1px,0px);}
+}
+
+
+#button-27:hover {
+	transform: scale(1.2, 1.2);
+	transition: all 0.3s ease-in-out;
+	background-color: #F44336;
+}
+
+
+
+#button-27:hover::after {
+    opacity: 1;
+}
+
+#button-28:hover {
+	box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+	background-color: #f4140b;
+	transition: all 0.3s ease-in-out;
+}
+
+#button-29:hover {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+#button-30:hover {
+	color: transparent;
+	text-shadow: 0 0 5px rgba(256,256,256,0.7);
+	transition: all 0.3s ease-in-out;
+}
+
+.better {
+-webkit-animation: better 0.5s forwards;
+animation: better 0.5s forwards;
+}
+@keyframes better {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(180deg);}
+}
+
+.back {
+	-webkit-animation: back 0.5s forwards;
+	animation: back 0.5s forwards;
+}
+@keyframes back {
+	0% {transform: rotate(180deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.allrotate {
+	-webkit-animation: allrotate 1s forwards;
+	animation: allrotate 1s forwards;
+}
+@keyframes allrotate {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.frown {
+	-webkit-animation: frown 1s forwards;
+	animation: frown 1s forwards;
+}
+@keyframes frown {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(90deg);}
+}
+
+.back {
+	-webkit-animation: back 1s forwards;
+	animation: back 1s forwards;
+}
+@keyframes back {
+	0% {transform: rotate(90deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.disable {
+	pointer-events: none;
+}
+
+.infrotate {
+	-webkit-animation: infrotate 1s infinite;
+	animation: infrotate 1s infinite;
+}
+@keyframes infrotate {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+#button-36 {
+	z-index: 9;
+}
+.grow {
+	-webkit-animation: grow 60s 1;
+	animation: grow 60s 1;
+}
+@keyframes grow {
+	0% {transform: scale(1, 1);}
+	100% {transform: scale(300, 300);}
+}
+
+#button-37:hover {
+	transform: scale(1.2, 1.2)rotate(-10deg);
+	transition: all 0.3s ease-in-out;
+	background-color: #F44336;
+}
+
+.rainbow {
+	-webkit-animation: rainbow 10s infinite;
+	animation: rainbow 10s infinite;
+}
+@keyframes rainbow {
+	0% {box-shadow: 0px 5px 0px 0px #3C93D5;}
+	25% {box-shadow: 0px 5px 0px 0px #3bd548;}
+	50% {box-shadow: 0px 5px 0px 0px #d53b57;}
+	75% {box-shadow: 0px 5px 0px 0px #cf3bd5;}
+	100% {box-shadow: 0px 5px 0px 0px #3C93D5;}
+}
+
+.scrolling{
+	background: linear-gradient(270deg, #65d55a, #ae5ad5, #55acee, #ee558a);
+	background-size: 800% 800%;
+
+	-webkit-animation: scrolling 30s ease infinite;
+	-moz-animation: scrolling 30s ease infinite;
+	animation: scrolling 30s ease infinite;
+}
+
+@keyframes scrolling {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.text-shadow{
+	-webkit-animation: text-shadow 3s ease infinite;
+	-moz-animation: text-shadow 3s ease infinite;
+	animation: text-shadow 3s ease infinite;
+
+}
+
+@keyframes text-shadow {
+    0%{text-shadow: 0px 1px 0px #b2a98f,
+		                 0px 4.6px 3px rgba(0,0,0,0.15),
+		                 0px 8px 0.6px rgba(0,0,0,0.1),
+		                 0px 11px 10px rgba(0,0,0,0.1);}
+    50%{text-shadow: 0px 2px 0px #b2a98f,
+		                 0px 9.1px 6px rgba(0,0,0,0.15),
+		                 0px 16px 1.2px rgba(0,0,0,0.1),
+		                 0px 23px 20px rgba(0,0,0,0.1);}
+    100%{text-shadow: 0px 3px 0px #b2a98f,
+		                 0px 14px 10px rgba(0,0,0,0.15),
+		                 0px 24px 2px rgba(0,0,0,0.1),
+		                 0px 34px 30px rgba(0,0,0,0.1);}
+	}
+
+
+#button-41:hover
+	{
+	        border-radius:45%;
+					transition: all 0.8s ease-in-out;
+	}
+
+#button-42:hover{
+				transition: all 0.3s ease;
+        box-shadow: inset 0 0 0 7px #F13E0A;
+}
+
+.bounceup {
+	animation:bounceup 1s infinite;
+	-webkit-animation:bounceup 1s infinite;
+}
+
+@-webkit-keyframes bounceup {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:15px; }
+  50%      { bottom:20px; }
+  100%     {bottom:0;}
+}
+
+.bouncedown {
+  animation:bouncedown 1s infinite;
+	-webkit-animation:bouncedown 1s infinite;
+}
+@-webkit-keyframes bouncedown {
+  0%       { bottom:-5px; }
+  25%, 75% { bottom:-15px; }
+  50%      { bottom:-20px; }
+  100%     {bottom:0;}
+}
