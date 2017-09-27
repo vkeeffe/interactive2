@@ -1,0 +1,227 @@
+body {
+
+}
+
+html, body {
+      overflow: hidden;
+ }
+
+.btn {
+width: 50px;
+height: 50px;
+display: inline-block;
+position: relative;
+float: left;
+z-index: 1;
+overflow: hidden;
+transition: box-shadow 0.5s;
+
+}
+
+
+
+.red {
+background-color: #B48B7D;
+
+}
+
+.black {
+background-color: #383838
+
+}
+
+.white {
+  background-color: #D6D9CE;
+
+}
+
+.pearl {
+background-color: #e4e6c3;
+
+}
+
+.green {
+background-color: #1ea896
+
+}
+
+.orange {
+  background-color: #FF715B;
+
+}
+
+.skewside {
+-webkit-animation: skewside 3s;
+animation: skewside 3s;
+animation-iteration-count: 4;
+z-index: 3;
+}
+
+@keyframes skewside {
+	0% {transform: skewX(0deg);}
+	23% {transform: skewX(64deg);}
+  27% {transform: skewX(64deg);}
+  50% {transform: skewX(0deg)}
+	73% {transform: skewX(-64deg);}
+  77% {transform: skewX(-64deg);}
+	100% {transform: skewX(0deg);}
+}
+
+
+
+
+.skewup {
+	-webkit-animation: skewup 3s;
+	animation: skewup 3s;
+  animation-iteration-count: 4;
+  z-index: 3;
+}
+
+@keyframes skewup {
+  0% {transform: skew(0deg);}
+  23% {transform: skew(0deg,64deg)}
+	27% {transform: skew(0deg,64deg);}
+  50% {transform: skew(0deg,0deg)}
+  73% {transform: skew(0deg,-64deg)}
+  77% {transform: skew(0deg,-64deg)}
+	100% {transform: skew(0deg,0deg);}
+
+}
+
+
+.bounceup {
+	-webkit-animation: bounceup 6s infinite;
+	animation: bounceup 4s infinite;
+  z-index: 2;
+}
+
+@keyframes bounceup {
+	0% {transform: translate(0px,0px);}
+	10% {transform: translate(0px,-100px);}
+	18% {transform: translate(0px,0px);}
+	30% {transform: translate(0px,-80px);}
+	35% {transform: translate(0px,-0px);}
+	45% {transform: translate(0px,-55px);}
+	50% {transform: translate(0px,-0px);}
+	60% {transform: translate(0px,-35px);}
+	63% {transform: translate(0px,20px);}
+	70% {transform: translate(0px,-10px);}
+	74% {transform: translate(0px,10px);}
+	80% {transform: translate(0px,0px);}
+}
+
+
+.bouncedown {
+	-webkit-animation: bouncedown 6s infinite;
+	animation: bouncedown 4s infinite;
+  z-index: 2;
+}
+
+@keyframes bouncedown {
+	0% {transform: translate(0px,0px);}
+	10% {transform: translate(0px,100px);}
+	18% {transform: translate(0px,0px);}
+	30% {transform: translate(0px,80px);}
+	35% {transform: translate(0px,0px);}
+	45% {transform: translate(0px,55px);}
+	50% {transform: translate(0px,0px);}
+	60% {transform: translate(0px,35px);}
+	63% {transform: translate(0px,-20px);}
+	70% {transform: translate(0px,10px);}
+	74% {transform: translate(0px,-10px);}
+	80% {transform: translate(0px,0px);}
+}
+
+
+
+.swipe{
+	-webkit-animation: swipe 5s;
+	animation: swipe 5s;
+  animation-iteration-count: 4;
+  z-index: 1;
+}
+
+@keyframes swipe {
+	0% {transform: translate(0px,0px);}
+	33% {transform: translate(-400px,0px);}
+	88% {transform: translate(400px,0px);}
+	99% {transform: translate(1px,0px);}
+}
+
+
+
+.slideside {
+  -webkit-animation: slideside 5s;
+  animation: slideside 5s;
+  animation-iteration-count: 4;
+  z-index: 2;
+
+}
+
+@keyframes slideside {
+  0% {transform: translate(0px,0px);}
+  25% {transform: translate(-200px,0px);}
+  50% {transform: translate(0px,0px);}
+  75% {transform: translate(200px,0px);}
+  100% {transform: translate(0px,0px);}
+}
+
+
+.slideup {
+  -webkit-animation: slideup 5s;
+  animation: slideup 5s;
+  animation-iteration-count: 4;
+  z-index: 2;
+
+}
+
+@keyframes slideup {
+  0% {transform: translate(0px,0px);}
+  25% {transform: translate(0px,-200px);}
+  50% {transform: translate(0px,0px);}
+  75% {transform: translate(0px,200px);}
+  100% {transform: translate(0px,0px);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  position:fixed;
+  position:absolute;
+  height: 100vh;
+  width:110vw;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: 0 auto;
+  z-index: 0;
+
+  will-change: opacity;
+    transition: opacity 0.3s ease-out;
+    background-color: #B48B7D;
+    background-image: linear-gradient(to top, #383838 0%, #383838 30%, #B48B7D 40%, #B48B7D 70%, #D6D9CE 80%, #D6D9CE 100%);
+    -webkit-background-size: 100% 400%;
+    -moz-background-size: 100% 400%;
+    background-size: 100% 400%;
+    -webkit-animation: grad-anim 21s infinite linear;
+    -moz-animation: grad-anim 21s infinite linear;
+    animation: grad-anim 21s infinite linear;
+}
+
+@-webkit-keyframes grad-anim{to{background-position:0
+  400%;}}
+  @-moz-keyframes grad-anim{to{background-position:0
+    400%;}}
+    @keyframes grad-anim{to{background-position:0
+      400%;}}
