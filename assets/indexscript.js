@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-$('a').click(function(e) {
+$('#presentation').click(function(e) {
     e.preventDefault();  //stop the browser from following
     window.location.href = 'assets/presentation.key';
 });
