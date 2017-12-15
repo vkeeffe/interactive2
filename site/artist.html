@@ -3,84 +3,338 @@
   <title>Artists</title>
   <link rel="stylesheet" href="css/style-artist.css">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Cutive|Oxygen+Mono" rel="stylesheet">
+
   <script src="js/index.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/jquery.nicescroll.js"></script>
 </head>
+
 <body>
 
+
   <h1>please allow your microphone</h1>
+<script type="text/javascript">
+  document.body.className += ' fade-out';
+</script>
+<!--Fix the header position and make the whole page scroll-->
+<!--Get rid of the artist circle on the mockup make it just the image with information-->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+
+function play(){
+    var audio = document.getElementById("luke");
+    audio.play();
+};
+function play2(){
+    var audio = document.getElementById("winderen");
+    audio.play();
+};
+function play3(){
+    var audio = document.getElementById("fusinato");
+    audio.play();
+};
+function play4(){
+    var audio = document.getElementById("norment");
+    audio.play();
+};
+function play5(){
+    var audio = document.getElementById("kim");
+    audio.play();
+};
+function play6(){
+    var audio = document.getElementById("kirkegaard");
+    audio.play();
+};
+function play7(){
+    var audio = document.getElementById("mirza");
+    audio.play();
+};
+</script>
+
+
+
+
+
+
+
+
+<div id="mass">
+
   <div id="header">
-          <svg preserveAspectRatio="none" id="visualizer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
-
-                <mask id="mask">
-                    <g id="maskGroup">
-                  </g>
-                </mask>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style="stop-color:#F4F4F4;stop-opacity:1" />
-                    <stop offset="45%" style="stop-color:#F4F4F4;stop-opacity:1" />
-                    <stop offset="90%" style="stop-color:#191919;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#191919;stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="100%" height="135%" padding="50%" fill="url(#gradient)" mask="url(#mask)"></rect>
-        </svg>
-
-<div id="logo">
-  <img src="assets/logoish.png" alt="" />
-</div>
 
 <div id="logo-type">
   <h2>soundtracks</h2>
   <h3>exhibition</h3>
 </div>
-  <div id="menu-button">
-    <img src="assets/three-dots-menu.png" alt="" id="menu-button" />
 </div>
-</div>
-
 
 <div id="artist-container" class="bottom">
-  <h4 class="artist-head">artists<br>•</h4>
+
     <div id="artist-scroll">
-            <div class="artist" id="one">
-              <img src="assets/img/luke-toshiya.png" alt="" />
+            <a class="artist" id="one" type="button" value=""  onclick="play()">
+              <audio id="luke" src="assets/audio/lftt_ridges.mp3" ></audio>
+              <img src="assets/img/luke-toshiya.png" />
                 <p class="caption">Luke Fowler &<br>Toshiya Tsunoda</p>
-            </div>
-            <div class="artist" id="two">
-              <img src="assets/img/luke-toshiya.png" alt="" />
-                <p class="caption">Florian Hecker</p>
-            </div>
-            <div class="artist" id="three">
-              <img src="assets/img/luke-toshiya.png" alt="" />
+            </a>
+            <a class="artist" id="two" type="button" value=""  onclick="play2()">
+              <audio id="winderen" src="assets/audio/jw_ultrafield.mp3" ></audio>
+              <img src="assets/img/winderen.png" alt="" />
+                <p class="caption">Jana Winderen</p>
+            </a>
+            <a class="artist" id="three" type="button" value=""  onclick="play3()">
+              <audio id="fusinato" src="assets/audio/mf_spectral.mp3" ></audio>
+              <img src="assets/img/fusinato.png" alt="" />
                 <p class="caption">Marco Fusinato</p>
-            </div><br>
-            <div class="artist" id="four">
-              <img src="assets/img/luke-toshiya.png" alt="" />
-                <p class="caption">Richard Garet</p>
-            </div>
-            <div class="artist" id="five">
-              <img src="assets/img/luke-toshiya.png" alt="" />
+            </a>
+            <a class="artist" id="four" type="button" value=""  onclick="play4()">
+              <audio id="norment" src="assets/audio/cn_toll.mp3" ></audio>
+              <img src="assets/img/norment3.png" alt="" />
+                <p class="caption">Camille Norment</p>
+            </a>
+            <div class="artist" id="five" type="button" value=""  onclick="play5()">
+              <audio id="kim" src="assets/audio/csk_whennotconcentrated.mp3" ></audio>
+              <img src="assets/img/kim.png" alt="" />
                 <p class="caption">Christine Sun Kim</p>
-            </div>
-            <div class="artist" id="six">
-              <img src="assets/img/luke-toshiya.png" alt="" />
+            </div><br>
+            <div class="artist" id="six" type="button" value=""  onclick="play6()">
+              <audio id="kirkegaard" src="assets/audio/jk_concertroomjacobkirkegaard.mp3" ></audio>
+              <img src="assets/img/kirkegaard.png" alt="" />
                 <p class="caption">Jacob Kirkegaard</p>
             </div>
-  <script>$("#artist-scroll").niceScroll({
-    cursorwidth:"4.5px",
-    cursorborderradius:0,
-    cursoropacitymin:1,
-    smoothscroll: true,
-    cursorfixedheight: 30,
-    cursorcolor: "#191919",
-  });</script>
+            <div class="artist" id="seven" type="button" value=""  onclick="play7()">
+              <audio id="kirkegaard" src="assets/audio/jk_concertroomjacobkirkegaard.mp3" ></audio>
+              <img src="assets/img/mirza.png" alt="" />
+                <p class="caption">Haroon Mirza</p>
+            </div>
+
+
+
+
+
     </div>
+  </div>
+
+</div> <!--end of mass head-->
 
 
+
+
+
+<svg preserveAspectRatio="none" id="visualizer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+
+      <mask id="mask">
+          <g id="maskGroup">
+        </g>
+      </mask>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#F4F4F4;stop-opacity:1" />
+          <stop offset="45%" style="stop-color:#F4F4F4;stop-opacity:1" />
+          <stop offset="90%" style="stop-color:#191919;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#191919;stop-opacity:1" />
+      </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="100%" height="135%" padding="50%" fill="url(#gradient)" mask="url(#mask)"></rect>
+</svg>
+
+
+
+
+
+<div>
+  <h5 id="backbutton"><span id=spaceing>•</span><br>back</h5>
 </div>
+
+
+
+
+<div id="luke-name"><h5><span class="title">Luke Fowler and<br>Toshiya Tsunoda</span></div>
+
+
+
+<div id="luke-info" class="artist-info">
+  <img src="assets/img/artpage/lftt_04.jpg" class="artpage" />
+  <div id="luke-text" class="artist-text">
+  <div class="nicescroll-box"><h5><span class="title">Ridges on the Horizontal Plane.</span> <br>
+      2011. Installation view at Galerie Gisela Capitain, Cologne.
+      Courtesy the artists and Galerie Gisela Capitain, Cologne.
+      Photo: Lothar Schnepf</h5>
+      <p>Fragments of landscapes—projections of rippling water, reflections on
+        glass—are magnified for our consideration in Ridges on the Horizontal Plane.
+        Fowler and Tsunoda share a curiosity about the mechanics of perception and
+        the ways in which worldly phenomena are typically received and understood.
+        In their collaborations, they distill the interrelated and frequently invisible
+        elements that allow even the simplest action to occur. Here, for instance,
+        winds produced by fans make a fabric screen billow. This wind produces
+        distortion in the image, and occasionally the gusts are forceful enough to
+        cause the screen to brush up against the strings of a piano. The strings are
+        pulled taut across the screen, and upon contact they emit an audible drone.
+        Quite literally, the artists have made sound and image collide, and in doing
+        so they have opened up ways of listening and looking that highlight the
+        interdependence and interconnection of the occurrences of everyday life.</p>
+
+      </div>
+</div>
+</div>
+
+
+<div id="winderen-name"><h5><span class="title">Jana Winderen</span></div>
+
+<div id="winderen-info" class="artist-info">
+  <img src="assets/img/artpage/jw_06.jpg" class="artpage" />
+  <div id="winderen-text" class="artist-text">
+  <h5><span class="title">Disco Bay.</span><br>2007. Field photograph, Greenland.<br>
+    Courtesy the artist</h5>
+      <p>Travelling to remote corners of the earth to make her field recordings,
+        Winderen uses hydrophones (sensitive underwater microphones) to collect
+        sounds inaudible or inaccessible to unassisted human ears. She makes her
+        compositions and installations from the material of her recordings. “The pieces,”
+        she has written, “develop by listening again and again and slowly, slowly collaging
+        things together, more like sculpting than writing.” <br><br>
+        To create Ultrafield, Winderen
+        worked with sounds in the ultrasound range, which is above the hearing capacity of
+        humans but in which many mammal and insect species communicate. The artist recorded
+        the sounds made by certain species of bats, fish, and underwater insects and pitched
+        these transmissions down to the human range, allowing us to experience sonic realities
+        that are otherwise out of reach.</p>
+
+      </div>
+</div>
+
+
+<div id="fusinato-name"><h5><span class="title">Marco Fusinato</span></div>
+
+<div id="fusinato-info" class="artist-info">
+  <img src="assets/img/artpage/mf_shaar.jpg" class="artpage" />
+  <div id="fusinato-text" class="artist-text">
+  <h5><span class="title">Mass Black Implosion (Shaar, Iannis Xenakis).</span><br>
+    2012. Ink on archival facsimile of score; framed. Part one of five parts. Courtesy <br>the
+    artist and Anna Schwartz Gallery.</h5>
+      <p>To make these drawings Fusinato chose a point on the page and then ruled a line
+        from every note in the composition back to that point. This ongoing series, initiated
+         in 2007, is founded—literally overlaid—on the scores of pioneering avant-garde composers.
+          In the works on view here, Fusinato has drawn on a score penned by the Greek composer
+          Iannis Xenakis (1922–2001), whose groundbreaking post–World War II works were deeply
+          informed by mathematical and architectural logic, and, later, by computer programming.
+          Xenakis worked for more than a decade in the studio of the architect Le Corbusier, and
+          he often composed with an existing architectural site in mind. Here Fusinato has used
+          Xenakis's score in the same way—as a pre-existing space.<br><br>
+This drawing and others in the artist's Mass Black Implosion series
+have an immense gravitational density, which seems to suggest that all
+the notes should be played at once. Fusinato's intervention thus shifts
+the scores away from Xenakis's original intention, collapsing linear/durational
+performance into simultaneity.</p>
+
+      </div>
+</div>
+
+
+
+<div id="norment-name"><h5><span class="title">Camille Norment</span></div>
+
+<div id="norment-info" class="artist-info">
+  <img src="assets/img/artpage/cn_01.jpg" class="artpage" />
+  <div id="norment-text" class="artist-text">
+  <h5><span class="title">Triplight.</span><br>
+    2008. Microphone cage, stand, light, electronics, dimensions variable. Courtesy the artist</h5>
+      <p>To make Triplight, Norment started with a 1955 Shure microphone—the model used by Billie Holliday,
+        Ella Fitzgerald, Louis Armstrong, and other legendary jazz singers. Norment removed its original
+         parts and replaced them with a small flickering light. This light casts a shadow, projecting
+         onto the wall what appears to be a luminescent rib cage, evocative of an absent performer.<br><br>
+
+The title refers to the expression “trip the light fantastic,” which means to dance lightly and nimbly,
+ not unlike the way the light in Norment’s piece bounces off the wall. The phrase was popularized in
+ 1894 in the chorus of the slow waltz song “Sidewalks of New York”: “Boys and girls together, me and
+ Mamie O'Rourke/Tripped the light fantastic/On the sidewalks of New York.” Thus, the piece also
+ functions as a romantic elegy for a New York City of the past, where people waltzed on sidewalks.</p>
+
+      </div>
+</div>
+
+
+<div id="kim-name"><h5><span class="title">Christine Sun Kim</span></h5></div>
+
+<div id="kim-info" class="artist-info">
+  <img src="assets/img/artpage/csk_05.jpg" class="artpage" />
+  <div id="kim-text" class="artist-text">
+  <h5><span class="title">Pianoiss … issmo (Worse Finish).</span><br>
+     2012. Transcript, pastel and pencil on paper. Courtesy of the artist. Photo: Erica Leone</h5>
+      <p>In her series Scores and Transcripts, Sun Kim—who was born deaf—combines and transforms
+        the various types of notation that shape her understanding and communication: among them,
+        American Sign Language, musical notation, English vernacular, and body language. To her,
+        each of these has its own parameters, social value, and set of rules. In the drawings,
+        these grammars and languages rub up against each other, allowing for the examination of
+        their similarities and differences and shifting her personal relationship to them.<br><br>
+
+In All. Day. the artist has traced the path her hand would take to communicate the concept
+“all day” in American Sign Language—an arc that mirrors the movement of the sun. The central
+annotation is a rest bar (the musical symbol for a silent interval), and adjacent to this she
+has written the number 126,144,000, which is an approximate calculation of how many rest bars
+would add up to the thirty-two years of silence she had experienced at the time she made this drawing.</p>
+
+      </div>
+</div>
+
+
+<div id="jacob-name"><h5><span class="title">Jacob Kirkegaard</span></h5></div>
+
+<div id="jacob-info" class="artist-info">
+  <img src="assets/img/artpage/jk_04.jpg" class="artpage" />
+  <div id="jacob-text" class="artist-text">
+  <h5><span class="title">AION.</span><br>
+     2006. Photograph, Lambda print on dibond. Courtesy the artist</h5>
+      <p>Kirkegaard’s AION—“infinity” or “eternity” in ancient Greek—was
+        inspired by the groundbreaking sound work I am sitting in a room
+        (1969), by artist Alvin Lucier (American, born 1931), in which
+        Lucier recorded himself saying, “I am sitting in a room, different
+        from the one you are in now. I am recording the sound of my
+        speaking voice.” He then played these phrases back and re-recorded
+        them. He did this repeatedly until his words were unrecognizable,
+        his voice smoothed into a warbly hum. Kirkegaard has taken Lucier’s
+        action a step further, placing recording equipment in four abandoned
+        spaces inside the exclusion area near the Chernobyl nuclear power
+        plant site (a swimming pool, a concert hall, a gymnasium, and a church),
+        then re-recording the results. In the final recordings, each of these
+        ostensibly silent, empty spaces takes on a very distinct resonance.
+        In effect, Kirkegaard has recorded the voices of rooms.</p>
+
+      </div>
+</div>
+
+
+
+<div id="mirza-name"><h5><span class="title">Haroon Mirza</span><br>(no audio)</h5></div>
+
+<div id="mirza-info" class="artist-info">
+  <img src="assets/img/artpage/hm_01.jpg" class="artpage" />
+  <div id="mirza-text" class="artist-text">
+  <h5><span class="title">Frame for a Painting.</span><br>
+     2012. LEDs, bicycle light, LED drivers, active speakers, and table, 10:54 min. Courtesy the artist</h5>
+      <p>In Mirza’s installations, each element is reliant on and responsive to others and to the architecture
+        of the site. Mirza refers to these as “self-governing” systems. Often these works appear familiar and
+        slightly outdated, evocative of a 1990s rave, an early video game, or a living room. All of this is
+        true in Frame for a Painting. Each iteration of the work includes a different painting, chosen from
+        the collection of the venue where it is installed. Here, from MoMA’s collection, the artist has chosen
+        Composition in Yellow, Blue, and White, I (1937), by Piet Mondrian. Mirza’s “framing” devices are many.
+         Not only is the painting framed physically by LED lights synced to an electronic sound track, but
+         conceptually it is recontextualized as an element in an installation dated 2012. Furthermore, it’s
+          juxtaposed against a midcentury Danish side table and is installed in an exhibition pointedly
+          addressing sound as such. Nonetheless, Mirza’s installation honors themes already evident in Mondrian’s
+           painting—including the particularities of color, material, and rhythm—and ultimately underscores
+           the pleasures and idiosyncrasies of sensory interplay.</p>
+
+      </div>
+</div>
+
 
 
 

@@ -3,20 +3,64 @@ width: 100%;
 height: 100%;
 padding: 0;
 margin: 0;
-background-color:#F4F4F4;
+background-color:#FEFFFF;
 position: absolute;
-overflow: hidden;
 }
-#header{
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+
+
+#cursor {
+  display: block;
   position: absolute;
+  margin-top: -60px;
+  margin-left: -25px;
+  width: 0px;
+  height: 0px;
+  z-index: 5;
+  text-align: center;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 70px solid green;
+}
+
+
+#header{
+  position: fixed;
   display: block;
   margin-top: 0px;
   z-index: 1;
+  height: 150px;
+}
+
+#header:hover {
+  z-index: 15;
 }
 #visualizer {
   width: 105%;
   z-index: 1;
 }
+
+.massfade {
+  opacity: 0;
+  transition: 1s opacity;
+}
+
+
+
+
+
+
 svg{
 display: inline;
 width: 100%;
@@ -26,6 +70,7 @@ margin: 0;
 position:fixed;
 z-index: 2;
 }
+
 path{
 stroke-linecap: square;
 stroke: white;
@@ -37,63 +82,98 @@ rect {
 
 
 #logo{
-  margin-left: 50px;
+  margin-left: 100px;
   margin-top: 50px;
   padding: 0;
   width: 210px;
   position: absolute;
+  z-index: 5;
 }
 
+font-family: 'Anonymous Pro', monospace;
+font-family: 'Cutive', serif;
+
+
 h1{
-width: 100%;
-height:100%;
-font-family: 'Inconsolata', monospace;
+width: 50px;
+height: 50px;
+font-family: 'Oxygen Mono', monospace;
+
 position:absolute;
 text-align:center;
 color:#191919;
-font-size: 16px;
-top: 45%;
+font-size: 22px;
+top: 17%;
 opacity: 1;
 transition: opacity 0.8s ease-in-out;
 -moz-transition: opacity 0.8s ease-in-out;
 -webkit-transition: opacity 0.8s ease-in-out;
-z-index: 5;
+z-index: 3;
+line-height: 25px;
 }
 
-#two{
-  margin-left: 33vw;
-  padding: 0;
-}
-#three{
-  margin-left: 29.25vw;
-  margin-top: -5vw;
-}
-#four{
-  margin-top: -5vw;
-  margin-left: 9vw;
-}
-#five{
-  margin-top: -19.2vw;
-  margin-left: 56vw;
-}
-#six{
-  margin-left: 29.25vw;
-  margin-top: -5vw;
-}
-.artist{
+.artist {
+  opacity: 1;
+  margin-left: 16.5vw;
+  margin-top: 12vh;
+  margin-right:20.5vw;
   text-align: center;
   width: 232px;
   height: 273px;
-  z-index: 10;
+  z-index: 200;
   display: inline-table;
 }
+
+
+
+img {
+  width: auto;
+  transition: 1s opacity;
+}
+
+#two{
+  margin-left: 0;
+  padding: 0;
+}
+#three{
+  margin-left: 0;
+  margin-top: 0;
+  z-index: 11;
+}
+#four{
+  margin-top: 0;
+  margin-left: 0;
+  z-index: 11;
+}
+#five{
+  margin-top: 0;
+  margin-left: 0;
+  z-index: 11;
+}
+#six{
+  margin-left: ;
+  margin-top: 0;
+  z-index: 21;
+}
+#seven {
+  margin-top: 0;
+  margin-left: 0;
+  z-index: 21;
+}
+
+
 .caption {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Oxygen Mono', monospace;
+
   color:#191919;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: bold;
   display: relative;
   margin-top: 25px;
+  background-color:#FEFFFF;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -107,9 +187,11 @@ div#logo-type{
   width: 100vw;
   height: 128px;
   text-align: center;
+
 }
 h2 {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Oxygen Mono', monospace;
+
   position:relative;
   display: block;
   color:#191919;
@@ -123,7 +205,8 @@ h2 {
 
 }
 h3 {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Oxygen Mono', monospace;
+
   position:relative;
   display: inline;
   color:#191919;
@@ -137,13 +220,19 @@ h3 {
 }
 
 h4 {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Oxygen Mono', monospace;
+
   position:relative;
   color:#191919;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 0.06em;
   text-align: center;
+
+}
+
+img:hover{
+  filter: invert(100%);
 
 }
 
@@ -160,16 +249,23 @@ div#menu-button {
 }
 
 .artist-head {
-  position: relative;
-  margin-left: 1vw;
-  width: 100px;
+  position: fixed;
+  margin-left: 10%;
+  width: 100%;
+  z-index: 10;
+}
+
+.navcurrent {
+  margin-left: 40%;
+  margin-top: 7%;
+
 }
 
 div#artist-container{
-  width:75vw;
-  height: 708px;
+  width: 100vw;
+  height: 100%;
   left: 50%;
-  margin-left: -37.5vw; /* Half of the width */
+  margin-left: -36vw; /* Half of the width */
   margin-right: auto;
   margin-top: auto;
   z-index: 5;
@@ -182,13 +278,187 @@ div#artist-container{
 
 div#artist-scroll {
   position: relative;
-  background-color: #F4F4F4;
-  opacity: 0.8;
-  z-index: 5;
-  width: 72.5vw;
-  height:592px;
+  z-index: 10;
+  width: 100%;
+  height:100%;
+  margin-top: 30px;
+  margin-left: -17px;
+  margin-right: auto;
+   bottom:0;
+}
+
+
+div.artist-info {
+  display: none;
+  height: 783.128	;
+  position: absolute;
+  width: 484px;
+  z-index: 20;
+  bottom: 0;
+  margin-top: auto;
+  margin-left: 1033px;
+  overflow-y: scroll;
+  background-color: #FEFFFF;
+}
+
+#luke-name {
+    opacity: 0;
+    margin-left: 400px;
+    margin-top: -58px;
+    position: absolute;
+}
+
+#winderen-name {
+    opacity: 0;
+    margin-left: 400px;
+    margin-top: -58px;
+    position: absolute;
+
+}
+
+#fusinato-name {
+    opacity: 0;
+    margin-left: 400px;
+    margin-top: -58px;
+    position: absolute;
+
+}
+
+#norment-name {
+    opacity: 0;
+    margin-left: 400px;
+    margin-top: -58px;
+    position: absolute;
+
+}
+
+#kim-name {
+    opacity: 0;
+    margin-left: 400px;
+    margin-top: -58px;
+    position: absolute;
+
+}
+
+#jacob-name {
+    opacity: 0;
+    margin-left: 400px;
+    margin-top: -58px;
+    position: absolute;
+
+}
+
+#mirza-name {
+    opacity: 0;
+    margin-left: 400px;
+    margin-top: -58px;
+    position: absolute;
+
+}
+
+#backbutton {
+  opacity: 0;
+  z-index: 50;
+  margin-left: 72px;
+  margin-top: 331px;
+  text-align: center;
+  line-height: 136%;
+}
+#backbutton:hover {
+  cursor: pointer;
+}
+
+#spaceing {
+  letter-spacing: 4px;
+}
+
+
+
+div.artist-text {
+  bottom: 0;
+  position: relative;
+}
+
+img.artpage {
+  width: 484px;
+  height: auto;
+  position: relative;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 19px;
+}
+
+p {
+  font-family: 'Oxygen Mono', monospace;
+  font-weight: normal;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+
+span.title{
+  font-family: 'Oxygen Mono', monospace;
+
+  font-size: 22px;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+h5{
+  font-family: 'Oxygen Mono', monospace;
+
+  position:relative;
+  display: block;
+  color:#191919;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
   margin-left: auto;
   margin-right: auto;
-   overflow-y: scroll;
-   bottom:0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  letter-spacing: 0.06em;
+}
+
+
+
+div#luke-info {
+opacity: 0;
+transition: 1s opacity;
+
+}
+
+div#winderen-info {
+  opacity: 0;
+  transition: 1s opacity;
+
+}
+
+div#fusinato-info {
+  opacity: 0;
+  transition: 1s opacity;
+
+}
+
+div#norment-info {
+  opacity: 0;
+  transition: 1s opacity;
+
+}
+
+div#kim-info {
+  opacity: 0;
+  transition: 1s opacity;
+
+}
+
+div#jacob-info {
+  opacity: 0;
+  transition: 1s opacity;
+
+}
+
+div#mirza-info {
+  opacity: 0;
+  transition: 1s opacity;
+
 }

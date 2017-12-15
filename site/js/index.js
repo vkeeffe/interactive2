@@ -7,9 +7,114 @@ window.onload = function () {
     var path;
     var report = 0;
 
+
+
+
+
+
+
+    $( "#one" ).click(function() {
+      $( "#mass" ).fadeTo( "slow", 0);
+      $("#luke-name").delay(3000).fadeTo("slow", 1);
+      $("#luke-info").delay(10000).fadeTo("slow", 1);
+      $('#backbutton').delay(10000).fadeTo("slow", 0.9);
+    });
+
+    $( "#two" ).click(function() {
+      $( "#mass" ).fadeTo( "slow", 0);
+      $("#winderen-name").delay(3000).fadeTo("slow", 1);
+      $("#winderen-info").delay(10000).fadeTo("slow", 1);
+      $('#backbutton').delay(10000).fadeTo("slow", 1);
+    });
+
+    $( "#three" ).click(function() {
+      $( "#mass" ).fadeTo( "slow", 0);
+      $("#fusinato-name").delay(3000).fadeTo("slow", 1);
+      $("#fusinato-info").delay(5000).fadeTo("slow", 1);
+      $('#backbutton').delay(4000).fadeTo("slow", 1);
+    });
+
+    $( "#four" ).click(function() {
+      $( "#mass" ).fadeTo( "slow", 0);
+      $("#norment-name").delay(4000).fadeTo("slow", 1);
+      $("#norment-info").delay(10000).fadeTo("slow", 1);
+      $('#backbutton').delay(10000).fadeTo("slow", 1);
+    });
+
+    $( "#five" ).click(function() {
+      $( "#mass" ).fadeTo( "slow", 0);
+      $("#kim-name").delay(4000).fadeTo("slow", 1);
+      $("#kim-info").delay(10000).fadeTo("slow", 1);
+      $('#backbutton').delay(10000).fadeTo("slow", 1);
+    });
+
+    $( "#six" ).click(function() {
+      $( "#mass" ).fadeTo( "slow", 0);
+      $("#jacob-name").delay(4000).fadeTo("slow", 1);
+      $("#jacob-info").delay(10000).fadeTo("slow", 1);
+      $('#backbutton').delay(10000).fadeTo("slow", 1);
+    });
+
+    $( "#seven" ).click(function() {
+      $( "#mass" ).fadeTo( "slow", 0);
+      $("#mirza-name").delay(2000).fadeTo("slow", 1);
+      $("#mirza-info").delay(4000).fadeTo("slow", 1);
+      $('#backbutton').delay(4000).fadeTo("slow", 1);
+    });
+
+    $( "#backbutton" ).click(function() {
+        setTimeout( function(){
+          $('.artist-info').css('display', 'none');
+        },2000);
+
+      $("#luke-info").fadeTo("slow", 0);
+      $("#winderen-info").fadeTo("slow", 0);
+      $("#fusinato-info").fadeTo("slow", 0);
+      $("#norment-info").fadeTo("slow", 0);
+      $("#kim-info").fadeTo("slow", 0);
+      $("#jacob-info").fadeTo("slow", 0);
+      $("#mirza-info").fadeTo("slow", 0);
+      $("#backbutton").fadeTo("slow", 0);
+
+      $("#luke-name").fadeTo("slow", 0);
+      $("#winderen-name").fadeTo("slow", 0);
+      $("#fusinato-name").fadeTo("slow", 0);
+      $("#norment-name").fadeTo("slow", 0);
+      $("#kim-name").fadeTo("slow", 0);
+      $("#jacob-name").fadeTo("slow", 0);
+      $("#mirza-name").fadeTo("slow", 0);
+
+      $("#mass").delay(2000).fadeTo(2500, 1);
+
+});
+
+
+
+
+
+    $(document).on('mousemove', function(e){
+      $('#cursor').css({
+        left:  e.pageX,
+        top:   e.pageY
+      });
+    });
+
+
+    $("#artist-scroll").niceScroll({
+      cursorwidth:"4.5px",
+      cursorborderradius:0,
+      cursoropacitymin:1,
+      smoothscroll: true,
+      cursorfixedheight: 30,
+      cursorcolor: "#191919",
+    });
+
     var soundAllowed = function (stream) {
+      $(function() {
+          $('body').removeClass('fade-out');
+      });
         window.persistAudioStream = stream;
-        h.innerHTML = "thank you";
+        h.innerHTML = "   ";
         h.setAttribute('style', 'opacity: 0;');
         var audioContent = new AudioContext();
         var audioStream = audioContent.createMediaStreamSource( stream );
@@ -39,7 +144,7 @@ window.onload = function () {
     }
 
     var soundNotAllowed = function (error) {
-        h.innerHTML = "You must allow your microphone";
+        h.innerHTML = "please allow your microphone";
         console.log(error);
     }
 
@@ -47,3 +152,31 @@ window.onload = function () {
     navigator.getUserMedia({audio:true}, soundAllowed, soundNotAllowed);
 
 };
+
+
+
+
+
+var nice = $(".artist-info").getNiceScroll();
+$(document).ready(function() {$(".artist-info").niceScroll({
+  cursorcolor: "#191919",
+  cursoropacitymin: 0,
+  cursoropacityma,
+  cursorwidth: "5px",
+  zindex: "auto" | 20,
+  scrollspeed: 35,
+  mousescrollstep: 20,
+  emulatetouch: true,
+  boxzoom: true,
+  dblclickzoom: false,
+  gesturezoom: false,
+  autohidemode: true | "scroll",
+  iframeautoresize: true,
+  spacebarenabled: true,
+  enablemousewheel: true,
+  enablekeyboard: true,
+  smoothscroll: true,
+  sensitiverail: false
+
+});
+});
