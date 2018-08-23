@@ -79,15 +79,7 @@ $(document).ready(function(){
                 });
 
 
-              $(".btn").click(function(){
-              $(".instructions").animate({
-                "left": "70%",}, 800)
-                });
 
-              $(".point").click(function(){
-                $(".instructions").animate({
-                  "left": "100%",}, 800)
-                });
 
 
 
