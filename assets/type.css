@@ -1,0 +1,756 @@
+body {
+  width: 8810px;
+  height: 1vh;
+}
+
+
+
+div.letter-strip {
+  height: 320px;
+  width: 7410px;
+  position: relative;
+  margin-top: 30vh;
+  margin-left: 0vw;
+  padding: 0;
+}
+div.splash {
+    left: 7030px;
+    width: 2000px;
+    top: -850px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    position: relative;
+    float: left;
+    transform: scale(0.5);
+}
+
+div.letter-canvas {
+width: 285px;
+height: 320px;
+position: relative;
+overflow: hidden;
+float: left;
+}
+
+
+div.square {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+div.square2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+svg.line-a {
+  position: absolute;
+  stroke: black;
+  stroke-width: 2px;
+  z-index: -1;
+  margin:0;
+  padding: 0;
+  opacity: 0;
+}
+svg.line-b {
+  opacity: 0;
+  position: absolute;
+  stroke: black;
+  stroke-width: 2px;
+  z-index: -1;
+  margin:0;
+  padding: 0;
+  opacity: 0;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+div {
+  transition: dash ease 1s;
+}
+
+
+.one {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 1s linear forwards;
+  animation-iteration-count: 1;
+}
+
+.two {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 1s linear forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+
+}
+.three {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 1s linear forwards;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+
+}
+.four {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 1s linear forwards;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+
+}
+.five {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 1s linear forwards;
+  -webkit-animation-delay: 4s;
+  animation-delay: 5s;
+
+}
+.six {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 1s linear forwards;
+  -webkit-animation-delay: 4s;
+  animation-delay: 6s;
+
+}
+
+.a{
+  margin-left: 100px;
+}
+.ab{
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+div.as1 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.as2 {
+margin-top: 0px;
+margin-left: 60px;
+}
+div.as3 {
+margin-top: 180px;
+margin-left: 120px;
+}
+div.as4 {
+margin-top: 120px;
+margin-left: 100px;
+}
+
+.bb{
+  margin-top: 40px;
+}
+div.bs1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.bs2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.bs3 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.bs4 {
+  margin-top: 42px;
+  margin-left: 100px;
+}
+div.bs5 {
+  margin-top: 160px;
+  margin-left: 120px;
+}
+
+.c {
+  margin-left: -25px;
+}
+.cb {
+  margin-left: -25px;
+  margin-top: 40px;
+}
+div.cs1 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.cs2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.cs3 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
+
+.d{
+  margin-left: 5px;
+}
+.db{
+  margin-left: 5px;
+  margin-top: 40px;
+}
+div.ds1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ds2 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.ds3 {
+  margin-top: 84px;
+  margin-left: 120px;
+}
+
+.e{
+  margin-left: -25px;
+}
+.eb{
+  margin-left: -25px;
+  margin-top: 40px;
+}
+div.es1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.es2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.es3 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.es4 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.es5 {
+  margin-top: 84px;
+  margin-left: 100px;
+}
+div.es6 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
+
+.f{
+  margin-left: -10px;
+}
+.fb{
+  margin-left: -10px;
+  margin-top: 40px;
+}
+div.fs1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.fs2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.fs3 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.fs4 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.fs5 {
+  margin-top: 84px;
+  margin-left: 100px;
+}
+
+.g{
+  margin-left: -20px;
+}
+.gb{
+  margin-left: -20px;
+  margin-top: 30px;
+}
+div.gs1 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.gs2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.gs3 {
+  margin-top: 180px;
+  margin-left: 60px;
+}
+div.gs4 {
+  margin-top: 120px;
+  margin-left: 120px;
+}
+
+.hb{
+  margin-top: 30px;
+}
+div.hs1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.hs2 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.hs3 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.hs4 {
+  margin-top: 84px;
+  margin-left: 120px;
+}
+div.hs5 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
+
+.ib{
+  margin-top: 30px;
+}
+div.is1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.is2 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+
+.j {
+  margin-left: -140px;
+}.jb {
+  margin-left: -140px;
+  margin-top: 30px;
+}
+
+div.js1 {
+  margin-top: 0px;
+  margin-left: 80px;
+}
+div.js2 {
+  margin-top: 180px;
+  margin-left: 80px;
+}
+div.js3 {
+  margin-top: 120px;
+  margin-left: 0px;
+}
+
+.k{
+  margin-left: -30px;
+}
+.kb{
+  margin-left: -30px;
+  margin-top: 30px;
+}
+div.ks1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ks2 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.ks3 {
+  margin-top: 84px;
+  margin-left: 42px;
+}
+div.ks4 {
+  margin-top: 0px;
+  margin-left: 100px;
+}
+div.ks5 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
+
+.lb {
+  margin-top: 30px;
+}
+div.ls1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ls2 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.ls3 {
+  margin-top: 180px;
+  margin-left: 80px;
+}
+
+.m {
+  margin-left: -60px;
+}
+.mb {
+  margin-left: -60px;
+  margin-top: 30px;
+}
+div.ms1 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.ms2 {
+  margin-top: 0px;
+  margin-left: 42px;
+}
+div.ms3 {
+  margin-top: 180px;
+  margin-left: 100px;
+}
+div.ms4 {
+  margin-top: 0px;
+  margin-left: 160px;
+}
+div.ms5 {
+  margin-top: 180px;
+  margin-left: 202px;
+}
+
+.n{
+  margin-left: 55px;
+}
+.nb {
+  margin-left: -28px;
+  margin-top: 30px;
+}
+div.ns1 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.ns2 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ns3 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
+div.ns4 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+
+.o{
+  margin-left: -25px;
+}
+.ob{
+  margin-left: -25px;
+  margin-top: 30px;
+}
+div.os1 {
+  margin-top: 0px;
+  margin-left: 60px;
+}
+div.os2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.os3 {
+  margin-top: 180px;
+  margin-left: 60px;
+}
+div.os4 {
+  margin-top: 84px;
+  margin-left: 120px;
+}
+
+.p {
+  margin-left: -18px;
+}
+.pb {
+  margin-left: -18px;
+  margin-top: 30px;
+}
+div.ps1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ps2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.ps3 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.ps4 {
+  margin-top: 42px;
+  margin-left: 100px;
+}
+
+.q {
+  margin-left: -55px;
+}
+.qb {
+  margin-left: -55px;
+  margin-top: 30px;
+}
+div.qs1 {
+  margin-top: 0px;
+  margin-left: 60px;
+}
+div.qs2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.qs3 {
+  margin-top: 180px;
+  margin-left: 60px;
+}
+div.qs4 {
+  margin-top: 84px;
+  margin-left: 120px;
+}
+div.qs5 {
+  margin-top: 240px;
+  margin-left: 42px;
+}
+div.qs6 {
+  margin-top: 260px;
+  margin-left: 120px;
+}
+
+.r {
+  margin-left: -5px;
+}
+.rb {
+  margin-left: -5px;
+  margin-top: 30px;
+}
+div.rs1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.rs2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.rs3 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.rs4 {
+  margin-top: 42px;
+  margin-left: 100px;
+}
+div.rs5 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
+
+.s {
+  margin-left: -15px;
+}
+.sb {
+  margin-left: -15px;
+  margin-top: 30px;
+}
+div.ss1 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.ss2 {
+  margin-top: 84px;
+  margin-left: 0px;
+}
+div.ss3 {
+  margin-top: 100px;
+  margin-left: 120px;
+}
+div.ss4 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+
+.t {
+  margin-left: -15px;
+}
+.tb {
+  margin-left: -15px;
+  margin-top: 30px;
+}
+div.ts1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ts2 {
+  margin-top: 0px;
+  margin-left: 60px;
+}
+div.ts3 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.ts4 {
+  margin-top: 180px;
+  margin-left: 60px;
+}
+
+.u {
+  margin-left: -20px;
+}
+.ub {
+  margin-left: -20px;
+  margin-top: 30px;
+}
+div.us1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.us2 {
+  margin-top: 180px;
+  margin-left: 20px;
+}
+div.us3 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.us4 {
+  margin-top: 180px;
+  margin-left: 100px;
+}
+
+.v {
+  margin-left: -15px;
+}
+.vb {
+  margin-left: -15px;
+  margin-top: 30px;
+}
+div.vs1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.vs2 {
+  margin-top: 180px;
+  margin-left: 60px;
+}
+div.vs3 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+
+.w{
+  margin-left: -20px;
+}
+.wb{
+  margin-left: -20px;
+  margin-top: 30px;
+}
+div.ws1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ws2 {
+  margin-top: 180px;
+  margin-left: 60px;
+}
+div.ws3 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.ws4 {
+  margin-top: 180px;
+  margin-left: 180px;
+}
+div.ws5 {
+  margin-top: 0px;
+  margin-left: 240px;
+}
+
+.x{
+  margin-left: 115px;
+}
+.xb{
+  margin-left: 115px;
+  margin-top: 30px;
+}
+div.xs1 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.xs2 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.xs3 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.xs4 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
+
+.y{
+  margin-left: -5px;
+}
+.yb{
+  margin-left: -5px;
+  margin-top: 30px;
+}
+div.ys1 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div.ys2 {
+  margin-top: 100px;
+  margin-left: 60px;
+}
+div.ys3 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.ys4 {
+  margin-top: 180px;
+  margin-left: 60px;
+}
+
+.z{
+  margin-left: -5px;
+}
+.zb{
+  margin-left: -5px;
+  margin-top: 30px;
+}
+div.zs1 {
+  margin-top: 0px;
+  margin-left: 20px;
+}
+div.zs2 {
+  margin-top: 0px;
+  margin-left: 120px;
+}
+div.zs3 {
+  margin-top: 180px;
+  margin-left: 0px;
+}
+div.zs4 {
+  margin-top: 180px;
+  margin-left: 120px;
+}
